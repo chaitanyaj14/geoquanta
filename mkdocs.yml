@@ -81,6 +81,7 @@ nav:
     - Report Issues: https://github.com/chaitanyaj14/geoquanta/issues
     - Examples:
         - examples/intro.ipynb
+        - examples/random.ipynb
     - API Reference:
           - geoquanta module: geoquanta.md
           - common module: common.md
