@@ -14,5 +14,5 @@
 
 ## Features
 
--   Visualising vector and raster data
--   Anlyzing vector and raster data
+-   Visualizing vector and raster data
+-   Analyzing vector and raster data
