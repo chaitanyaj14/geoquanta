@@ -14,6 +14,7 @@
 ## Features
 
 -   Generate random numbers
+-   Analyze raster and vector data
 
 ## Demo
 -  Test line from PC
