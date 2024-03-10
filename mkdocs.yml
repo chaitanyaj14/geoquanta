@@ -80,8 +80,11 @@ nav:
     - Changelog: changelog.md
     - Report Issues: https://github.com/chaitanyaj14/geoquanta/issues
     - Python Basics:
-        - python/data_types.ipynb
-        - python/getting_started.ipynb
+        - python/00_getting_started.ipynb
+        - python/01_introduction_to_python.ipynb
+        - python/02_variables.ipynb
+        - python/03_data_types.ipynb
+        - python/100_lists.ipynb
     - Examples:
         - examples/intro.ipynb
         - examples/random.ipynb
