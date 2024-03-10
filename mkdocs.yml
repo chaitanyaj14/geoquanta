@@ -79,6 +79,9 @@ nav:
     - FAQ: faq.md
     - Changelog: changelog.md
     - Report Issues: https://github.com/chaitanyaj14/geoquanta/issues
+    - Python Basics:
+        - python/data_types.ipynb
+        - python/getting_started.ipynb
     - Examples:
         - examples/intro.ipynb
         - examples/random.ipynb
