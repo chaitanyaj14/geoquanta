@@ -84,6 +84,9 @@ nav:
         - python/01_introduction_to_python.ipynb
         - python/02_variables.ipynb
         - python/03_data_types.ipynb
+        - python/04_operators.ipynb
+        - python/05_input_output.ipynb
+        - python/06_conditional_statements.ipynb
         - python/100_lists.ipynb
     - Examples:
         - examples/intro.ipynb
