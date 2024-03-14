@@ -87,6 +87,8 @@ nav:
         - python/04_operators.ipynb
         - python/05_input_output.ipynb
         - python/06_conditional_statements.ipynb
+        - python/07_loops.ipynb
+        - python/08_functions.ipynb
         - python/100_lists.ipynb
     - Examples:
         - examples/intro.ipynb
