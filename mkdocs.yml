@@ -92,11 +92,12 @@ nav:
         - python/09_data_structures.ipynb
         - python/10_modules_and_packages.ipynb
         - python/11_error_handling.ipynb
-        - python/12_file_handling.ipynb
+        - python/12_file_handling.ipynbS
         - python/13_oop.ipynb
         - python/14_special_methods.ipynb
     - Examples:
-        - examples/intro.ipynb
+        - examples/Geoquanta.ipynb
+        - examples/Add_Basemaps_and_Tile_Layers.ipynb
         - examples/random.ipynb
     - API Reference:
           - geoquanta module: geoquanta.md
