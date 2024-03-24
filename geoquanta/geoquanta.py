@@ -23,10 +23,21 @@ class Map(ipyleaflet.Map):
     def add_geojson(self, data, name="geojson", **kwargs):
         
         import json
+        import requests
 
-        if isinstance (data, str):
-            with open(data, 'r') as data:
-                data = json.load(data)
+        # if isinstance (data, str):
+        #     with open(data, 'r') as data:
+        #         data = json.load(data)
+        
+        if isinstance(data, dict):
+            data = data
+        elif data.startswith("http"):
+            data = requests.get(data).json()
+        elif data.lower().endswith((".json", ".geojson")):
+            with open(data) as fp:
+                data = json.load(fp)
+        else:
+            data = data
 
         if "style" not in kwargs:
             kwargs["style"] = {"color": "blue", 'fillOpacity': 0.2, 'weight': 1}
