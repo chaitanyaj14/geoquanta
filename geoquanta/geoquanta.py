@@ -24,10 +24,6 @@ class Map(ipyleaflet.Map):
         
         import json
         import requests
-
-        # if isinstance (data, str):
-        #     with open(data, 'r') as data:
-        #         data = json.load(data)
         
         if isinstance(data, dict):
             data = data
