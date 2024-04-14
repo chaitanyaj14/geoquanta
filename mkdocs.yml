@@ -79,6 +79,16 @@ nav:
     - FAQ: faq.md
     - Changelog: changelog.md
     - Report Issues: https://github.com/chaitanyaj14/geoquanta/issues
+    - Examples:
+        - examples/Geoquanta.ipynb
+        - examples/Add_Basemaps_and_Tile_Layers.ipynb
+        - examples/Vector.ipynb
+        - examples/random.ipynb
+        - examples/csv.ipynb
+    - API Reference:
+          - geoquanta module: geoquanta.md
+          - common module: common.md
+          - utils module: utils.md
     - Python Basics:
         - python/00_getting_started.ipynb
         - python/01_introduction_to_python.ipynb
@@ -95,11 +105,4 @@ nav:
         - python/12_file_handling.ipynb
         - python/13_oop.ipynb
         - python/14_special_methods.ipynb
-    - Examples:
-        - examples/Geoquanta.ipynb
-        - examples/Add_Basemaps_and_Tile_Layers.ipynb
-        - examples/Vector.ipynb
-        - examples/random.ipynb
-    - API Reference:
-          - geoquanta module: geoquanta.md
-          - common module: common.md
+
