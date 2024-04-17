@@ -83,7 +83,8 @@ nav:
         - examples/Geoquanta.ipynb
         - examples/Add_Basemaps_and_Tile_Layers.ipynb
         - examples/Vector.ipynb
-        - examples/random.ipynb
+        - examples/Raster.ipynb
+        - examples/Widgets.ipynb
         - examples/csv.ipynb
     - API Reference:
           - geoquanta module: geoquanta.md

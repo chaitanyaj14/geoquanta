@@ -140,4 +140,36 @@ class Map(ipyleaflet.Map):
         if zoom_to_layer:
             self.center = client.center()
             self.zoom = client.default_zoom
+            
+    def add_opacity_slider(self, layer_index=-1, description="Opacity", position="topright"):
+        """Adds an opacity slider to the map.
+
+        Args:
+            layer (object): The layer to which the opacity slider is added.
+            description (str, optional): The description of the opacity slider. Defaults to "Opacity".
+            position (str, optional): The position of the opacity slider. Defaults to "topright".
+        """
+        try:
+            import ipywidgets as widgets
+        except ImportError:
+            raise ImportError("Please install ipywidgets to use this function.")
+
+        
+        layer = self.layers[layer_index]
+        opacity_slider = widgets.FloatSlider(
+            description=description,
+            min=0,
+            max=1,
+            value=layer.opacity,
+            style={"description_width": "initial"},
+        )
+
+        def update_opacity(change):
+            layer.opacity = change["new"]
+
+        opacity_slider.observe(update_opacity, "value")
+
+        control = ipyleaflet.WidgetControl(widget=opacity_slider, position=position)
+        self.add(control)
+
     
