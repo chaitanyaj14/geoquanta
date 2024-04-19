@@ -171,5 +171,51 @@ class Map(ipyleaflet.Map):
 
         control = ipyleaflet.WidgetControl(widget=opacity_slider, position=position)
         self.add(control)
+        
+    def add_marker(self, location, draggable, marker_text=None):
+        from ipyleaflet import Marker
+        from ipywidgets import HTML
+        """Adds a marker to the map.
+
+        Args:
+            location (tuple): A tuple containing the latitude and longitude of the marker (e.g., (lat, lon)).
+            draggable (bool): Whether the marker should be draggable.
+            marker_text (str, optional): Text to display in the marker's popup. Defaults to None.
+        """
+        marker = Marker(location=location, draggable=draggable)
+        if marker_text:
+            message = HTML()
+            message.description = marker_text
+            marker.popup = message
+        self.add_layer(marker)
+        
+    def add_basemap_gui(self, basemaps=None, position="topright"):
+        """Adds a basemap GUI to the map.
+
+        Args:
+            position (str, optional): The position of the basemap GUI. Defaults to "topright".
+        """
+        try:
+            import ipywidgets as widgets
+        except ImportError:
+            raise ImportError("Please install ipywidgets to use this function.")
+
+        basemap_selector = widgets.Dropdown(
+            options=[
+                "OpenStreetMap",
+                "OpenTopoMap",
+                "Esri.WorldImagery",
+                "Esri.NatGeoWorldMap",
+            ],
+            description="Basemap",
+        )
+
+        def update_basemap(change):
+            self.add_basemap(change["new"])
+
+        basemap_selector.observe(update_basemap, "value")
+
+        control = ipyleaflet.WidgetControl(widget=basemap_selector, position=position)
+        self.add(control)
 
     
