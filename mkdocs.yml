@@ -86,6 +86,7 @@ nav:
         - examples/Raster.ipynb
         - examples/Widgets.ipynb
         - examples/Markers.ipynb
+        - examples/Toolbar.ipynb
         - examples/csv.ipynb
     - API Reference:
           - geoquanta module: geoquanta.md
