@@ -88,6 +88,7 @@ nav:
         - examples/Markers.ipynb
         - examples/Toolbar.ipynb
         - examples/csv.ipynb
+        - examples/Map_Interactions.ipynb
     - API Reference:
           - geoquanta module: geoquanta.md
           - common module: common.md
@@ -108,4 +109,5 @@ nav:
         - python/12_file_handling.ipynb
         - python/13_oop.ipynb
         - python/14_special_methods.ipynb
+        
 

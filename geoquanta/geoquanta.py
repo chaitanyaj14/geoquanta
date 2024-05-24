@@ -217,5 +217,44 @@ class Map(ipyleaflet.Map):
 
         control = ipyleaflet.WidgetControl(widget=basemap_selector, position=position)
         self.add(control)
+        
+    def add_beans(self, name="beans"):
+        beans = ipyleaflet.MarkerCluster(name=name)
+        self.add(beans)
+        
+        for i in range(10):
+            marker = ipyleaflet.Marker(location=(i*10, i*10))
+            beans.markers = beans.markers + (marker,)
+            
+    def add_latlon_widget(self, position="bottomleft"):
+        import ipywidgets as widgets
+        from ipyleaflet import WidgetControl
+        
+        self.default_style = {"cursor": "crosshair"}
+        
+        output = widgets.Output()
+        control = WidgetControl(widget=output, position=position)
+        self.add(control)
+        
+        # latlon = widgets.Label(value="")
+        # latlon_control = WidgetControl(widget=latlon, position=position)
+        # self.add(latlon_control)
+        
+        with output:
+            print("Click on the map")
+        
+        def update_latlon(**kwargs):
+            with output:
+                if kwargs.get("type") == "click":
+                    latlon = kwargs.get("coordinates")
+                    output.clear_output()
+                    print(f"Latitude: {latlon[0]:.2f}, Longitude: {latlon[1]:.2f}")
+            # latlon.value = (
+            #     f"Latitude: {event['new'][0]:.2f}, Longitude: {event['new'][1]:.2f}"
+            # )
+            
+        self.on_interaction(update_latlon)
+                
+        
 
     
